@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+    
+    <title>MalangHospital</title>
+</head>
+<body onload="init()">
+    <div id="halamanutama" data-role="page">
+        <div class="skin" data-role="header" data-position="fixed">
+            <center class="header">	<h3>Malang Hospital</h3> </center>
+        </div>
+        <div data-role="main" class="ui-content">
+            <a href="#diagnosa" data-role="button" data-icon="check">Diagnosis Awal Penyakit</a>
+            <a href="#map" data-role="button" data-icon="check">Lokasi Tempat Pengobatan</a>
+            <a href="#info" data-role="button" data-icon="check">Info Aplikasi</a>
+        </div>
+    </div>
+
+    <div id="diagnosa" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#halamanutama">Back</a>
+            <h3><center>Masalah Penyakit</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li data-role="divider"><span data-icon="home"></span><b>Jenis Masalah Penyakit</b></li>
+                <li><a href="#demam"><p><h3>Demam</h3></p></a></li>
+                <li><a href="#beratturun"><p><h3>Berat Badan Turun</h3></p></a></li>
+                <li><a href="#sakitperut"><p><h3>Sakit Perut</h3></p></a></li>
+                <li><a href="#nyeridada"><p><h3>Nyeri Dada</h3></p></a></li>
+                <li><a href="#sakitkepala"><p><h3>Sakit Kepala</h3></p></a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="map" data-role="page">
+
+        <div data-role="header" data-theme="b">
+            <a href="index.html#halamanutama">Back</a>
+            <h3><center>Jenis Lokasi</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+
+
+        <div data-role="main" class="ui-content">
+
+            <a href="#lokasi" data-role="button" data-icon="check">Berdasarkan Jenis Kategori</a>
+            <a href="#poli" data-role="button" data-icon="check">Berdasarkan Poli</a>
+
+        </div>
+    </div>
+
+    <div id="lokasi" data-role="page">
+
+        <div data-role="header" data-theme="b">
+            <a href="index.html#map">Back</a>
+            <h3><center>Jenis Kategori</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+
+            <a href="latmap1.html?id_kategori=1" rel="external" data-role="button" data-icon="check">Rumah Sakit</a>
+            <a href="latmap1.html?id_kategori=2" rel="external" data-role="button" data-icon="check">Klinik Rawat Jalan</a>
+            <a href="latmap1.html?id_kategori=22" rel="external" data-role="button" data-icon="check">Klinik Gigi</a>
+            <a href="latmap1.html?id_kategori=23" rel="external" data-role="button" data-icon="check">Klinik Kecantikan</a>
+            <a href="latmap1.html?id_kategori=24" rel="external" data-role="button" data-icon="check">Klinik Bersalin</a>
+            <a href="latmap1.html?id_kategori=25" rel="external" data-role="button" data-icon="check">Klinik Rawat Inap</a>
+            <a href="latmap1.html?id_kategori=31" rel="external" data-role="button" data-icon="check">Praktek dokter umum</a>
+            <a href="latmap1.html?id_kategori=4" rel="external" data-role="button" data-icon="check">Puskesmas</a>
+            <a href="latmap1.html?id_kategori=5" rel="external" data-role="button" data-icon="check">Apotik</a>
+            <a href="latmap1.html?id_kategori=6" rel="external" data-role="button" data-icon="check">Laboratorium</a>
+
+        </div>
+    </div>
+
+    <div id="poli" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#map">Back</a>
+            <h3><center>Jenis Poli</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+
+            <a href="latmap3.html?id_poli=1" rel="external" data-role="button" data-icon="check">Poli Umum</a>
+            <a href="latmap3.html?id_poli=2" rel="external" data-role="button" data-icon="check">Poli Gigi</a>
+            <a href="latmap3.html?id_poli=3" rel="external" data-role="button" data-icon="check">Poli Obsetri dan Ginekologi</a>
+            <a href="latmap3.html?id_poli=4" rel="external" data-role="button" data-icon="check">Poli Anak</a>
+            <a href="latmap3.html?id_poli=5" rel="external" data-role="button" data-icon="check">Poli Bedah</a>
+            <a href="latmap3.html?id_poli=6" rel="external" data-role="button" data-icon="check">Poli Jantung dan Pembuluh Darah</a>
+            <a href="latmap3.html?id_poli=7" rel="external" data-role="button" data-icon="check">Poli Penyakit Dalam</a>
+            <a href="latmap3.html?id_poli=8" rel="external" data-role="button" data-icon="check">Poli Radiologi</a>
+            <a href="latmap3.html?id_poli=9" rel="external" data-role="button" data-icon="check">Poli Mata</a>
+            <a href="latmap3.html?id_poli=10" rel="external" data-role="button" data-icon="check">Poli Saraf</a>
+            <a href="latmap3.html?id_poli=11" rel="external" data-role="button" data-icon="check">Poli THT</a>
+            <a href="latmap3.html?id_poli=12" rel="external" data-role="button" data-icon="check">Poli Paru</a>
+            <a href="latmap3.html?id_poli=13" rel="external" data-role="button" data-icon="check">Poli Kesehatan Jiwa</a>
+            <a href="latmap3.html?id_poli=14" rel="external" data-role="button" data-icon="check">Poli Kulit dan Kelamin</a>
+
+        </div>
+    </div>
+
+
+    <div id="info" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#halamanutama">Back</a>
+            <h3><center>Info Aplikasi</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <center><img src="images/logo.jpg"></center>
+            <center>	<h3>Malang Hospital</h3> </center>
+            <center>
+                <p>
+                    Aplikasi Malang Hospital Berisi Fitur Diagnosis Penyakit dan Fitur Pencarian Lokasi Tempat Pengobatan di Kota Malang yang
+                    terdiri dari Rumah Sakit, Puskesmas , Praktek Dokter Spesialis dan Dokter Umum, Klinik, serta Apotik dan Laboratorium Klinik atau Medis.
+                </p>
+                <p>
+                    Untuk Fitur Diagnosis Penyakit terdiri dari lima jenis penyakit yaitu Demam, Berat Badan Turun, Sakit Perut,
+                    Nyeri Dada, dan Sakit Kepala. Fitur Diagnosis Penyakit menyediakan fasilitas diagnosis penyakit dengan pertanyaan-pertanyaan gejala yang berhubungan dengan jenis masalah penyakit serta fasilitas penjelas sebagai penjelasan dari hasil diagnosis penyakit. Hasil diagnosis penyakit yang disediakan merupakan hasil diagnosis awal, maka untuk beberapa hasil diagnosis masih diperlukan pemeriksaan fisik ke dokter untuk mengetahui penyakit yang diderita lebih lanjut.
+                </p>
+                <p>Apabila dibutuhkan pemeriksaan medis, aplikasi ini menyediakan fitur untuk menunjukan rekomendasi tempat pengobatan yang harus dituju pengguna melalui tombol lihat rekomendasi tempat pengobatan pada menu fasilitas penjelas, tombol ini hanya akan muncul jika hasil diagnosis memerlukan pemeriksaan medis. Rekomendasi tempat pengobatan yang harus dituju yaitu langsung menuju rumah sakit atau bisa ke praktek dokter terlebih dahulu bergantung pada tingkat darurat penyakit yang diderita.</p>
+                <p> Aplikasi fitur diagnosa dibuat berdasarkan buku Dokter Di Rumah Anda dan hasil konsultasi dengan Dokter umum. Untuk data lokasi berasal dari Dinas Kesehatan Kota Malang</p>
+            </center>
+            <center>	<p>Aplikasi ini mengakses data dari server sehingga untuk mempergunakannya anda membutuhkan koneksi internet</p></center>
+
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div data-role="footer" data-theme="b"><center><p>created by Octantyas @2014</p></center></div>
+    </div>
+
+
+
+
+    <div id="demam" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#diagnosa">Back</a>
+            <h3><center>Demam</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3>Arti Demam</h3>
+                <div class="demam" data-role="content">
+                    <p style="color:white">
+                        Demam adalah suhu tubuh di atas 38 derajat Celcius
+                        Demam merupakan gejala dari berbagai macam penyakit, demam biasanya merupakan respon tubuh terhadap proses inflamasi (peradangan) yang bisa disebabkan berbagai macam hal seperti infeksi bakteri atau virus
+                        Pemaparan terhadap panas dan obat tertentu serta dehidrasi (kekurangan cairan) juga dapat menaikkan suhu tubuh.
+                        Anda bisa menduga terserang demam bila anda juga merasa menggigil, panas dan dingin bergantian, dan secara umum merasa tidak enak badan.
+                        Untuk memeriksa demam, gunakan termometer secara cermat.
+                    </p>
+                </div>
+            </div>
+            <div data-role="collapsible">
+                <h3>Mengatasi Demam</h3>
+                <div class="demam" data-role="content">
+                    <p style="color:white">
+                        Ketika sedang tidak sehat, ukurlah temperatur setiap 4 jam.
+                        Bila menggunakan termometer air raksa kibaskan baik-baik sampai air raksanya turun sampai dibawah 36oC,
+                        jepit dibawah lidah atau ketiak biarkan selama 3 menit.
+                        Anda dapat dikatakan menderita demam bila temperatur pada termometer menunjukkan angka suhu  38oC.
+                        Untuk mengurangi demam beristirahatlah di kamar yang sejuk, minum banyak air dingin,
+                        minumlah parasetamol, aspirin, atau ibuprofen untuk menurunkan demamnya.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="diagnosa.html?id_pertanyaan=1" rel="external" data-role="button">Mulai Diagnosis</a>
+
+    </div>
+
+    <div id="beratturun" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#diagnosa">Back</a>
+            <h3><center>Berat Badan Turun</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3>Berat Badan Turun</h3>
+                <div class="demam" data-role="content">
+                    <p style="color:white">
+                        Bagi orang yang memiliki masalah dengan angka di timbangan, berat badan yang turun mungkin sebuah anugerah. Tapi berat badan yang turun tentu harus disertai dengan diet sehat dan olahraga. Jika turunnya secara tiba-tiba dan tanpa alasan, Anda perlu waspada beberapa penyakit.
+                        Beberapa penyakit yang perlu diwaspadai bila berat badan turun secara tiba-tiba antara lain :
+                    </p>
+                    <p style="color:white">
+                        1. Gangguan endokrin
+                        Penyebab paling umum dari penurunan berat badan mendadak adalah gangguan endokrin. Endokrin mengatur fungsi tubuh. Ketika kerjanya terganggu, tubuh akan membakar lebih banyak kalori, menyebabkan kelenjar tiroid bekerja berlebihan yang pada gilirannya membuat metabolisme meningkat dan tubuh tidak dapat menyerap semua nutrisi yang dibutuhkan.
+                    </p>
+                    <p style="color:white">
+                        2. Gangguan jantung, paru-paru dan ginjal
+                        Gangguan pada jantung dan paru-paru merupakan penyebab penting dari penurunan berat badan mendadak. Kondisi ini menyebabkan kurangnya sumber energi untuk tubuh agar berfungsi dengan baik. Selanjutnya dapat menyebabkan perasaan mual, muntah dan kekurangan protein. Semua hal ini pada akhirnya dapat menyebabkan berat badan turun.
+                    </p>
+                    <p style="color:white">
+                        3. Infeksi
+                        Infeksi internal (bagian dalam tubuh) tidak dapat dilihat dan sebagian besar bahkan tidak disadari. Infeksi ini misalnya disebabkan oleh jamur, sistem kekebalan tubuh yang agresif, yang menyebabkan pembakaran kalori lebih banyak. Sebagian besar infeksi terjadi di sistem pencernaan.
+                    </p>
+                    <p style="color:white">
+                        4. Kanker
+                        Salah satu gejala pertama kanker adalah penurunan berat badan mendadak. Tumor (jinak) dan kanker (ganas) menyerap nutrisi dari tubuh untuk tumbuh, juga akan menggunakan sebagai energi. Karena konsumsi nutrisi oleh tumor mulai meningkat, tubuh mulai kehilangan berat badan.
+                        Jika Anda mengalami penurunan berat badan mendadak, maka solusi terbaik adalah segera berkonsultasi dan memeriksakan diri ke dokter atau rumah sakit
+                    </p>
+                </div>
+            </div>
+            <div data-role="collapsible">
+                <h3>Cara Menaikkan Berat Badan Secara Aman</h3>
+                <div class="demam" data-role="content">
+                    <p style="color: white">
+                        Secara kesehatan terlalu kurus sama beisikonya dengan kegemukan. Bila terlalu kurus, menaikkan berat badan perlu ditujukan hanya
+                        untuk membentuk otot serta tulang, bukannya menyediakan timbunan lemak. Idealnya, anda perlu menaikkan berat badan secara berangsur dengan makan makanan sehat
+                        dan seimbang. Beberapa kali makan makanan bergizi setiap sehari, lebih memberikan pasokan energi lebih baik daripada dua kali makan besar per hari. Usahakan makan makanan ringan bergizi dan padat kalori seperti pisang dab sandwich di antara setiap waktu makan.
+                        Makanan tambahan dan minuman berbasis susu juga akan membantu, namun itu digunakan sebagai penambah makanan, bukannya menggantikan menu anda. Pastikan berolahraga
+                        secara teratur untuk membangun otot dan menambah kekuatan serta menambah selera makan. Bila anda mudah penat, lakukan olahraga ringan namun sering agar
+                        tidak terlalu memaksa tubuh anda sendiri
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="diagnosa.html?id_pertanyaan=28" rel="external" data-role="button">Mulai Diagnosis</a>
+
+
+    </div>
+
+    <div id="sakitperut" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#diagnosa">Back</a>
+            <h3><center>Sakit Perut</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3>Sakit Perut</h3>
+                <div class="demam" data-role="content">
+                    <p style="color:white">
+                        Banyak kasus sakit perut yang berlangsung singkat dan hanya sekedar karena makan atau minum terlalu banyak atau terburu-buru.
+                        Namun, sakit perut juga bisa karena kelainan di sistem pencernaan, sistem kemih, atau sistem reproduksi pada wanita. Semua sakit perut yang parah atau menetap harus segera mendapat perhatian medis selekas mungkin
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#perut" data-role="button">Mulai Diagnosis</a>
+
+    </div>
+
+
+    <div id="perut" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#sakitperut">Back</a>
+            <h3><center>Sakit Perut</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+
+
+        <p>
+            <center>
+                Dimanakah Lokasi Nyeri Perut yang paling dirasakan?
+            </center>
+        </p>
+
+
+        <a href="#perutatas" data-role="button">Perut Atas</a>
+        <a href="#perutbawah" data-role="button">Perut Bawah</a>
+
+    </div>
+
+
+    <div id="perutatas" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#sakitperut">Back</a>
+            <h3><center>Sakit Perut</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+
+
+        <p>
+            <center>
+                Pada perut bagian atas mana nyeri  paling dirasakan?
+            </center>
+        </p>
+
+
+        <a href="diagnosa.html?id_pertanyaan=45" rel="external" data-role="button">Ulu Hati</a>
+        <a href="diagnosa.html?id_pertanyaan=58" rel="external" data-role="button">Perut Kiri Atas</a>
+        <a href="diagnosa.html?id_pertanyaan=59" rel="external" data-role="button">Perut Kanan Atas</a>
+
+
+    </div>
+
+
+
+    <div id="perutbawah" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#sakitperut">Back</a>
+            <h3><center>Sakit Perut</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+
+
+        <p>
+            <center>
+                Posisi mana yang dirasakan nyeri?
+            </center>
+        </p>
+
+
+        <a href="diagnosa.html?id_pertanyaan=64" rel="external" data-role="button">Kiri Bawah</a>
+        <a href="diagnosa.html?id_pertanyaan=71" rel="external" data-role="button">Kanan Bawah</a>
+        <a href="diagnosa.html?id_pertanyaan=78" rel="external" data-role="button">Bawah Pusar</a>
+    </div>
+
+
+
+
+    <div id="nyeridada" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#diagnosa">Back</a>
+            <h3><center>Nyeri Dada</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3> Nyeri Dada</h3>
+                <div class="demam" data-role="content">
+                    <p style="color:white">
+                        Sakit dada (bagian di antara leher dengan ujung bawah rusuk) bisa membuat cemas namun biasanya tidak memiliki penyebab serius. Kebanyakan nyeri dada adalah karena kelainan ringan seperti peradangan otot atau salah pencernaan.
+                        . Sangat nyeri menekan di tengah dada, atau nyeri dada yang disertai sesak nafas, denyut jantung tidak teratur, mual,
+                        berkeringat atau limbung, mungkin menandakan kelainan serius di jantung atau paru-paru dan mungkin memerlukan penanganan
+                        darurat
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="diagnosa.html?id_pertanyaan=88" rel="external" data-role="button">Mulai Diagnosis</a>
+
+
+    </div>
+
+
+
+
+    <div id="sakitkepala" data-role="page">
+        <div data-role="header" data-theme="b">
+            <a href="index.html#diagnosa">Back</a>
+            <h3><center>Sakit Kepala</center></h3>
+            <a href="index.html#halamanutama">Home</a>
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3>Sakit Kepala</h3>
+                <div class="demam" data-role="content">
+                    <p style="color:white">
+                        Ada dua tipe sakit kepala: primer dan sekunder. Sakit kepala primer tidak disebabkan oleh suatu penyakit. Jenis sakit kepala primer umumnya dikenal sebagai sakit kepala stress dipicu oleh rasa khawatir/takut. Rasa sakitnya terasa mulai dari bagian belakang kepala hingga leher bagian atas, seolah-olah disekeliling kepala hingga alis diikat erat oleh topi yang kekecilan. Hampir setiap orang mengalami sakit kepala tensi, untuk mengatasinya cukup dengan intake aspirin, paracetamol, atau obat-obatan non-steroidal anti-inflammatory.
+                        Sedangkan sakit kepala sekunder dibedakan menjadi dua yaitu sakit kepala ringan dan berat. Adapun sakit kepala ringan dapat disebabkan oleh infeksi virus di rongga hidung, kurang tidur, penghentian konsumsi kafein atau pengobatan tertentu. Sementara sakit kepala berat dapat disebabkan oleh kanker otak, meningitis, encephalitis, pendarahan bagian dalam sub-arachnoid
+                    </p>
+                </div>
+            </div>
+            <div data-role="collapsible">
+                <h3>Cara Meredakan Sakit Kepala</h3>
+                <div class="demam" data-role="content">
+                    <p style="color:white">
+                        Untuk meredakan sakit kepala, beristirahatlah sejenak untuk mencari udara segar. Pijatlah leher
+                        dan otot-otot bahu. Bila langkah itu kurang menolong, istirahatlah di tempat tenang, sejuk,Ada dua tipe sakit kepala: primer dan sekunder. Sakit kepala primer tidak disebabkan oleh suatu penyakit. Jenis sakit kepala primer umumnya dikenal sebagai sakit kepala stress dipicu oleh rasa khawatir/takut. Rasa sakitnya terasa mulai dari bagian belakang kepala hingga leher bagian atas, seolah-olah disekeliling kepala hingga alis diikat erat oleh topi yang kekecilan. Hampir setiap orang mengalami sakit kepala tensi, untuk mengatasinya cukup dengan intake aspirin, paracetamol, atau obat-obatan non-steroidal anti-inflammatory.
+                        Sedangkan sakit kepala sekunder dibedakan menjadi dua yaitu sakit kepala ringan dan berat. Adapun sakit kepala ringan dapat disebabkan oleh infeksi virus di rongga hidung, kurang tidur, penghentian konsumsi kafein atau pengobatan tertentu. Sementara sakit kepala berat dapat disebabkan oleh kanker otak, meningitis, encephalitis, pendarahan bagian dalam sub-arachnoid
+
+                        dan gelap, serta minumlah obat pereda nyeri sesuai dosis yang dianjurkan
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="diagnosa.html?id_pertanyaan=113" rel="external" data-role="button">Mulai Diagnosis</a>
+
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/proses_gejala.js"></script>
+</body>
+</html>
